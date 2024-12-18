@@ -1,0 +1,14 @@
+
+import PyPDF2
+from PyPDF2 import PdfReader
+pdf_file=open('Contactus.pdf','rb')   
+read_file=PdfReader(pdf_file)
+num_pages=len(read_file.pages)
+
+page= read_file.pages[0]
+text = page.extract_text()
+
+print(len(text))
+print(text)
+
+# pdf_file.close
